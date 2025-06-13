@@ -38,14 +38,30 @@ ul {
     }
 }
 
+a {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
 .bg-light {
     background-color: $light-background;
+}
+
+.small {
+    padding: 10px 15px;
+}
+
+.large {
+    padding: 15px 20px;
 }
 
 .btn-primary {
     background-color: $primary-color;
     border: 1px solid $primary-color;
-    padding: 15px 20px;
     font-size: 1em;
     font-weight: 500;
     text-transform: uppercase;
@@ -59,8 +75,6 @@ ul {
 .btn-secondary {
     background-color: $secondary-color;
     border: 1px solid $secondary-color;
-
-    padding: 15px 20px;
     font-size: 1em;
     font-weight: 500;
     text-transform: uppercase;
@@ -90,6 +104,10 @@ header {
             text-transform: uppercase;
             font-weight: 500;
             margin-left: 20px;
+
+            &:hover {
+                color: $primary-color;
+            }
         }
 
         .logo {
@@ -219,5 +237,99 @@ footer {
     .card {
         border-radius: 40px;
         margin-bottom: 20px;
+    }
+}
+
+.section-5 {
+    .swiper {
+        padding: 25px 25px 50px 25px;
+
+        .swiper-pagination-bullet-active {
+            background-color: $secondary-color;
+        }
+    }
+
+    .card {
+        border-radius: 40px;
+
+        .card-body {
+            .rating {
+                color: $secondary-color;
+            }
+
+            .content {
+                p {
+                    font-size: 1em;
+                }
+            }
+
+            .meta {
+                img {
+                    border-radius: 50%
+                }
+            }
+
+            .name {
+                font-size: 1.3em;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.section-6 {
+    .card {
+        border-radius: 40px;
+
+        img {
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        .card-body {
+            a.title {
+                font-size: 1.4em;
+            }
+        }
+    }
+}
+
+.section-7 {
+    .hero {
+        background: Linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../images/hero.jpg);
+        background-size: cover;
+        min-height: 500px;
+        color: $text-white;
+    }
+
+    span {
+        color: $secondary-color;
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+}
+
+.section-8 {
+    .card {
+        border-radius: 40px;
+
+        img {
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+
+        .card-body {
+            a.title {
+                font-size: 1.4em;
+            }
+            .card-title{
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+            .card-sub-title{
+                font-size: 1.3em;
+                color: $light-background;
+            }
+        }
     }
 }
