@@ -10,7 +10,6 @@ const Services = () => {
       <Header />
       <main>
         {/* Hero section */}
-        |
         <SubHero
           preHeading="Quality. Intergrity. Value"
           heading="Services"

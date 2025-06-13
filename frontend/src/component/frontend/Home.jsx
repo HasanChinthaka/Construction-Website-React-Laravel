@@ -205,6 +205,8 @@ const Home = () => {
             </Swiper>
           </div>
         </section>
+
+        {/* blogs & news */}
         <section className="section-6 py-4 bg-light">
           <div className="container py-5">
             <div className="section-header text-center">
