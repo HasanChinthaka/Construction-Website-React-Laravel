@@ -56,7 +56,7 @@ const Blogs = () => {
                   <div className="card-body p-4">
                     <div className="mb-3">
                       <a href="#" className="title">
-                        {blog.title} {index + 1}
+                        {blog.title} {index + 4}
                       </a>
                     </div>
                     <a href="#" className="btn btn-primary small">
