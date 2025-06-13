@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
         <div className="container py-3">
-          <Navbar expand="lg" className="bg-body-tertiary">
+          <Navbar expand="lg" className="">
             <Navbar.Brand href="/" className="logo">
               <span>UrbanEdge</span> Construction
             </Navbar.Brand>

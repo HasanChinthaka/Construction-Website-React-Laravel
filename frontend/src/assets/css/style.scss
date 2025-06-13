@@ -4,6 +4,7 @@ $secondary-color : #FFB703;
 $text-color : #000;
 $text-white: #FFFFFF;
 $dark-background : #222725;
+$light-background : #9e9b9b;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
@@ -20,21 +21,27 @@ h2 {
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 p {
     font-size: 1.2em;
 }
 
-ul{
+ul {
     margin-left: 0;
     padding-left: 0;
-    li{
+
+    li {
         margin-left: 0;
         list-style: none;
     }
 }
+
+.bg-light {
+    background-color: $light-background;
+}
+
 .btn-primary {
     background-color: $primary-color;
     border: 1px solid $primary-color;
@@ -64,6 +71,17 @@ ul{
     }
 }
 
+.section-header {
+    span {
+        color: $primary-color;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
+
 header {
     nav {
         .nav-link {
@@ -86,30 +104,35 @@ header {
     }
 }
 
-footer{
+footer {
     background-color: $dark-background;
     color: $text-white;
-    h3{
+
+    h3 {
         font-size: 1.5em;
         color: $secondary-color;
     }
-    ul{
-        li{
+
+    ul {
+        li {
             padding: 5px 0;
         }
     }
-    a{
+
+    a {
         font-size: 1.2em;
         color: $text-white;
         text-decoration: none;
-        &:hover{
+
+        &:hover {
             color: $primary-color;
         }
     }
 }
+
 .section-1 {
     .hero {
-        background: Linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0,0,0,0)), url(../images/hero.jpg);
+        background: Linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url(../images/hero.jpg);
         background-size: cover;
         min-height: 800px;
         color: $text-white;
@@ -122,15 +145,79 @@ footer{
     }
 }
 
-.section-2{
-    img{
+.section-2 {
+    img {
         border-radius: 40px;
     }
-    span{
+
+    span {
         font-size: 1.2em;
         color: $primary-color;
         text-transform: uppercase;
         padding-bottom: 10px;
         font-weight: 500;
+    }
+}
+
+.section-3 {
+    .item {
+        position: relative;
+        overflow: hidden;
+        color: $text-white;
+        margin-bottom: 20px;
+
+        &:hover {
+            .service-body {
+                transform: translateY(0%);
+
+                .service-content {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .service-image {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                border-radius: 40px;
+                aspect-ratio: 1 /1.2;
+                object-fit: cover;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 40px;
+                background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0)13.02%, rgba(0, 0, 0, 0.51) 42.5%, rgba(0, 0, 0, 0.63) 70%, #000000 100%);
+            }
+        }
+
+        .service-body {
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            transform: translateY(80%);
+            transition: all 0.4s ease-in-out;
+
+            .service-content {
+                transition: all 0.4s ease-in-out;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.section-4 {
+    .card {
+        border-radius: 40px;
+        margin-bottom: 20px;
     }
 }
