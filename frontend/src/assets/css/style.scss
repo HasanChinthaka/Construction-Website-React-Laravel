@@ -337,8 +337,32 @@ footer {
 .section-9{
     .card{
         border-radius: 40px;
-        .card-body{
+        // .card-body{
             
+        // }
+    }
+}
+
+.login-form{
+    .card{
+        width: 450px;
+    }
+}
+
+.dashboard{
+    .card{
+        min-height: 400px;
+    }
+}
+
+.sidebar{
+    ul{
+        li{
+            a{
+                display: block;
+                padding: 10px 0px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+            }
         }
     }
 }
