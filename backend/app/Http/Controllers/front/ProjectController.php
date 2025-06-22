@@ -29,4 +29,21 @@ class ProjectController extends Controller
             'data' => $projects
         ]);
     }
+
+    public function show($id)
+    {
+        $project = Project::find($id);
+
+        if ($project == null) {
+            return response()->json([
+                'status' => false,
+                'errors' => "Project not found"
+            ]);
+        }
+
+        return response()->json([
+            'status' => true,
+            'data' => $project
+        ]);
+    }
 }

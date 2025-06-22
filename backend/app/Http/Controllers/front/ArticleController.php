@@ -29,4 +29,21 @@ class ArticleController extends Controller
             'data' => $articles
         ]);
     }
+
+    public function show($id)
+    {
+        $article = Article::find($id);
+
+        if ($article == null) {
+            return response()->json([
+                'status' => false,
+                'errors' => "Article not found"
+            ]);
+        }
+
+        return response()->json([
+            'status' => true,
+            'data' => $article
+        ]);
+    }
 }

@@ -4,6 +4,7 @@ import Footer from "../common/Footer";
 import SubHero from "../common/SubHero";
 import { Projects as OurProjects } from "../../constants/projects";
 import { fileUrl } from "../common/http";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -64,9 +65,9 @@ const Projects = () => {
                         <div className="service-content">
                           <p>{project.short_desc}</p>
                         </div>
-                        <a href="#" className="btn btn-primary small">
+                        <Link to={`/project/${project.id}`} className="btn btn-primary small">
                           Read More
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

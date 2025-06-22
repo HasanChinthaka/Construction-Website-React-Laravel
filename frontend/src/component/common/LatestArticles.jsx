@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fileUrl } from "./http";
+import { Link } from "react-router-dom";
 
 const LatestArticles = () => {
   const [articles, setArticles] = useState([]);
@@ -44,13 +45,13 @@ const LatestArticles = () => {
                     </div>
                     <div className="card-body p-4">
                       <div className="mb-3">
-                        <a href="#" className="title">
+                        <Link to={`/article/${article.id}`} className="title">
                           {article.title}
-                        </a>
+                        </Link>
                       </div>
-                      <a href="#" className="btn btn-primary small">
+                      <Link to={`/article/${article.id}`} className="btn btn-primary small">
                         Read More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

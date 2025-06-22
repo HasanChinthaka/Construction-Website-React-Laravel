@@ -9,6 +9,8 @@ use App\Http\Controllers\admin\TempImageController;
 use App\Http\Controllers\admin\TestimonialController;
 use App\Http\Controllers\AuthenticationCOntroller;
 use App\Http\Controllers\front\ArticleController as FrontArticleController;
+use App\Http\Controllers\front\ContactController;
+use App\Http\Controllers\front\MemberController as FrontMemberController;
 use App\Http\Controllers\front\ProjectController as FrontProjectController;
 use App\Http\Controllers\front\ServiceController as FrontServiceController;
 use App\Http\Controllers\front\TestimonialsController;
@@ -20,14 +22,21 @@ Route::post('/authenticate', [AuthenticationCOntroller::class, 'authenticate']);
 
 Route::get('/get-services', [FrontServiceController::class, 'index']);
 Route::get('/get-latest-services', [FrontServiceController::class, 'latestServices']);
+Route::get('/get-service/{id}', [FrontServiceController::class, 'show']);
 
 Route::get('/get-projects', [FrontProjectController::class, 'index']);
 Route::get('/get-latest-projects', [FrontProjectController::class, 'latestProjects']);
+Route::get('/get-project/{id}', [FrontProjectController::class, 'show']);
 
 Route::get('/get-articles', [FrontArticleController::class, 'index']);
 Route::get('/get-latest-articles', [FrontArticleController::class, 'latestArticles']);
+Route::get('/get-article/{id}', [FrontArticleController::class, 'show']);
 
 Route::get('/get-testimonials', [TestimonialsController::class, 'index']);
+
+Route::get('/get-members', [FrontMemberController::class, 'index']);
+
+Route::post('/contact-now', [ContactController::class, 'index']);
 
 
 Route::get('/user', function (Request $request) {
@@ -66,7 +75,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::put('/testimonials/{id}', [TestimonialController::class, 'update']);
     Route::get('/testimonials/{id}', [TestimonialController::class, 'show']);
     Route::delete('/testimonials/{id}', [TestimonialController::class, 'destroy']);
-    
+
     // members routes
     Route::post('/members', [MemberController::class, 'store']);
     Route::get('/members', [MemberController::class, 'index']);

@@ -3,6 +3,7 @@ import Header from "../common/Header";
 import Footer from "../common/Footer";
 import SubHero from "../common/SubHero";
 import { fileUrl } from "../common/http";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [articles, setArticles] = useState([]);
@@ -57,13 +58,13 @@ const Blogs = () => {
                       </div>
                       <div className="card-body p-4">
                         <div className="mb-3">
-                          <a href="#" className="title">
+                          <Link to={`/article/${article.id}`} className="title">
                             {article.title}
-                          </a>
+                          </Link>
                         </div>
-                        <a href="#" className="btn btn-primary small">
+                        <Link to={`/article/${article.id}`} className="btn btn-primary small">
                           Read More
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

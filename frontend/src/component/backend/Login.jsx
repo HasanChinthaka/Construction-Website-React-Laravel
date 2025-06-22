@@ -17,7 +17,6 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
     const api_url = import.meta.env.VITE_API_BASE_URL;
     const res = await fetch(`${api_url}/authenticate`, {
       method: "POST",
@@ -41,7 +40,6 @@ const Login = () => {
         navigate('/admin/dashboard')
         toast.success(result.message)
     }
-    console.log(result);
   };
 
   return (

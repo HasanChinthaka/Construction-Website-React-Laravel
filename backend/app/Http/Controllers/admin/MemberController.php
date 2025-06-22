@@ -128,7 +128,7 @@ class MemberController extends Controller
                 $fileName = strtotime('now') . $member->id . '.' . $ext;
                 // Create small thumbnail
                 $sourcePath = public_path('uploads/temp/' . $tempImage->name);
-                $destPath = public_path('uploads/members' . $fileName);
+                $destPath = public_path('uploads/members/' . $fileName);
 
                 $manager = new ImageManager(Driver::class);
                 $image = $manager->read($sourcePath);
