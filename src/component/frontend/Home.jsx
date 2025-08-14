@@ -38,8 +38,8 @@ const Home = () => {
                   detail. With years of experience and a dedication to quality.
                 </p>
                 <div className="mt-4">
-                  <a className="btn btn-primary large">Contact Now</a>
-                  <a className="btn btn-secondary large ms-2">View Projects</a>
+                  <a href="/contact-us" className="btn btn-primary large">Contact Now</a>
+                  <a href="/projects" className="btn btn-secondary large ms-2">View Projects</a>
                 </div>
               </div>
             </div>
