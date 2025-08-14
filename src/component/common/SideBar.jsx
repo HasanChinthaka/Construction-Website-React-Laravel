@@ -9,7 +9,7 @@ const SideBar = () => {
     <>
       <div className="card shadow boarder-0">
         <div className="card-body p-4 sidebar">
-          <h4>Sidebar</h4>
+          {/* <h4>Sidebar</h4> */}
           <ul>
             <li><Link to="/admin/dashboard">Dashboard</Link></li>
             <li><Link to="/admin/services">Services</Link></li>
